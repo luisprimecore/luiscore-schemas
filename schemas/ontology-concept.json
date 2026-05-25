@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://luiscore.com/schemas/ontology-concept.json",
+  "title": "LuisCore Ontology Concept",
+  "description": "Experimental ontology term from GET /api/ontology.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["slug", "label", "definition", "aliases"],
+  "properties": {
+    "slug": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "label": { "type": "string", "minLength": 1 },
+    "definition": { "type": "string" },
+    "aliases": {
+      "type": "array",
+      "items": { "type": "string" },
+      "default": []
+    }
+  }
+}
