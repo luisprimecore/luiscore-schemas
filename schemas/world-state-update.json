@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://luiscore.com/schemas/world-state-update.json",
+  "title": "LuisCore World-State Envelope Sample",
+  "description": "Sample envelope row from GET /api/world-state (experimental devnet metrics).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["key", "domain", "subject", "updated_at", "ok"],
+  "properties": {
+    "key": { "type": "string", "description": "Envelope key within the world-state namespace." },
+    "domain": { "type": "string", "description": "Top-level domain bucket (market, news, system, …)." },
+    "subject": { "type": "string", "description": "Subject identifier within the domain." },
+    "updated_at": { "type": "string", "format": "date-time" },
+    "ok": { "type": "boolean", "description": "Verifier / ingestion ok flag." }
+  }
+}
