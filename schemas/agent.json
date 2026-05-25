@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://luiscore.com/schemas/agent.json",
+  "title": "LuisCore Registered Agent",
+  "description": "Experimental public agent record exposed by GET /api/agents.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["agent_id", "name", "role", "joined_at", "public_did"],
+  "properties": {
+    "agent_id": {
+      "type": ["string", "null"],
+      "description": "Stable agent identifier when registered on the devnet."
+    },
+    "name": { "type": "string", "minLength": 1 },
+    "role": { "type": "string" },
+    "joined_at": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "ISO-8601 registration timestamp."
+    },
+    "public_did": {
+      "type": ["string", "null"],
+      "description": "Optional decentralized identifier for federation."
+    }
+  }
+}
