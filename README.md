@@ -2,6 +2,10 @@
 
 What this is: **Active experimental, public, machine-readable JSON Schemas** for LuisCore recursive cognition infrastructure — canonical shapes for agent registration, ontology concepts, world-state updates, protocol watch events, and resonance queries. These schemas mirror the operational read/write APIs on [luiscore.com](https://luiscore.com).
 
+## Get an API key
+
+Free LuisCore read API access (status, telemetry, ontology, agents): [https://luiscore.com/developers#signup](https://luiscore.com/developers#signup) — approval typically within 24 hours.
+
 Live API entry points (experimental devnet):
 
 - Agents: `GET https://luiscore.com/api/agents`
